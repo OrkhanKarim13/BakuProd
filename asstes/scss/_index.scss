@@ -1,0 +1,423 @@
+// start header
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  padding: 32px 0;
+  z-index: 1100;
+  .container {
+    .headerContent {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        .rightside {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          .lang {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .navBar {
+      .navList {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .navItem {
+          a {
+            color: #fff;
+          }
+        }
+        .navItem:nth-child(2) {
+          background-color: #fc3d40;
+          padding: 6px 24px;
+          border-radius: 24px;
+        }
+        .navItem:nth-child(3) {
+          background-color: rgba(255, 255, 255, 0.06);
+          padding: 6px 24px;
+          border-radius: 20px;
+        }
+        .navItem:nth-child(4) {
+          background-color: rgba(255, 255, 255, 0.06);
+          padding: 6px 24px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+
+// End header
+
+// Start home section
+
+.home {
+  width: 100%;
+  height: 100%;
+  .homeContainer {
+    width: 100%;
+    position: relative;
+    .videoContent {
+      width: 100%;
+      height: 800px;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .homeContent {
+      width: 50%;
+      position: absolute;
+      left: 5%;
+      bottom: 20%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      background-color: transparent;
+      color: #fff;
+      .mainHeader {
+        color: #fff;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+      }
+      .homeInfo {
+        color: #fff;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.2px;
+        width: 70%;
+      }
+      .homeButtons {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 0;
+        .btn {
+          a {
+            color: #fff;
+            padding: 18px 48px;
+          }
+        }
+        .btn:nth-child(1) {
+          a {
+            background-color: #fff;
+            color: black;
+            border-radius: 40px;
+          }
+        }
+        .btn:nth-child(2) {
+          a {
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(17px);
+            color: #fff;
+            border-radius: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End home section
+
+// Start intoCountry section
+
+.intoCountry {
+  padding-top: 96px;
+  .container {
+    .intoCountryContent {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 24px;
+      .intoText {
+        color: #1e1e1e;
+        font-size: 56px;
+        font-weight: 500;
+        line-height: 150%;
+        .special {
+          font-family: "Playfair Display";
+        }
+      }
+      .companyText {
+        color: #1e1e1e;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+// End IntoCountry section
+
+// Start numbers section
+
+.numbers {
+  padding: 56px 0 96px 0;
+  width: 100%;
+  background-color: #fff;
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    .numAnimation {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      .circle {
+        display: flex;
+        flex-direction: column;
+        .num {
+          color: #1e1e1e;
+          font-size: 72px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 100%;
+        }
+        .plus {
+          color: #1e1e1e;
+          font-size: 72px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 100%;
+        }
+        .numInfo {
+          font-size: 26px;
+        }
+      }
+    }
+    .partnersCover {
+      width: 100%;
+      margin-top: 96px;
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+// End numbers section
+
+// Start partners section
+
+.partners {
+  width: 100%;
+  .container {
+    .partnersContent {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      .partnersInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .partnersTitle {
+          color: #1e1e1e;
+          font-family: "Work Sans";
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 125%;
+        }
+        .partnersText {
+          color: #2a2a2a;
+          width: 65%;
+          font-family: "Work Sans";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+  }
+}
+// End partners section
+
+// Start OurPartners section
+
+.ourPartners {
+  width: 100%;
+  .ourPartnersGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .partnersInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 16px;
+      background-color: #fc3d40;
+      padding: 87px 56px;
+      .partnersHeader {
+        color: #fff;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+        width: 80%;
+      }
+      .partnersText {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: -0.2px;
+        width: 80%;
+      }
+      .partnersBtn {
+        display: flex;
+        padding: 32px 56px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 44px;
+        background-color: #fff;
+        margin-top: 16px;
+        a {
+          color: #000;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 100%;
+        }
+      }
+    }
+    .partnerWallpaper {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.products {
+  width: 100%;
+  padding: 96px 0;
+  background-color: #fdfaf6;
+  .container {
+    .productsContent {
+      .produtcsTitle {
+        color: #1e1e1e;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-bottom: 40px;
+      }
+    }
+    .prodCardBox {
+      width: 100%;
+      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      gap: 16px;
+      .productCard {
+        background-color: #fff;
+        .prodCardItem {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+        .productImage {
+          width: 100%;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDisc {
+          display: flex;
+          flex-direction: column;
+          padding: 0 24px;
+          gap: 16px;
+          background-color: #fff;
+          .productTitle {
+            width: 100%;
+            color: #000;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            text-align: left;
+          }
+          .productInfo {
+            color: #000;
+            font-family: "Work Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: -0.14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End ourPartners section
+
+@media (max-width: 992px) {
+  .home {
+    .homeContainer {
+      width: 100%;
+      .homeContent {
+        .mainHeader {
+          font-size: 38px;
+        }
+        .homeInfo {
+          font-size: 16px;
+          width: 100%;
+        }
+        .homeButtons {
+          .btn {
+            a {
+              padding: 12px 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .ourPartners {
+    .ourPartnersGrid {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ourPartnersGrid .partnersInfo,
+    .ourPartnersGrid .partnerWallpaper {
+      width: 100%;
+    }
+  }
+}
