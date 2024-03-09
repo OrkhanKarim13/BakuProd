@@ -9,23 +9,22 @@
 }
 .home .homeContainer .videoContent {
   width: 100%;
-  height: 800px;
+  height: 100vh;
 }
 .home .homeContainer .videoContent video {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .home .homeContainer .homeContent {
   width: 50%;
   position: absolute;
-  left: 5%;
-  bottom: 20%;
+  left: 56px;
+  bottom: 10%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
   background-color: transparent;
   color: #fff;
 }
@@ -99,13 +98,11 @@
   width: 100%;
   background-color: #fff;
 }
-.numbers .container {
-  width: 90%;
-  margin: 0 auto;
-}
 .numbers .container .numAnimation {
   width: 60%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
   justify-content: space-between;
 }
 .numbers .container .numAnimation .circle {
@@ -245,12 +242,12 @@
 .products .container .prodCardBox {
   width: 100%;
   display: flex;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
 }
 .products .container .prodCardBox .productCard {
+  width: 32%;
   background-color: #fff;
   border-radius: 16px;
   padding: 5px;
@@ -296,9 +293,12 @@
   letter-spacing: -0.14px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 937px) {
   .home .homeContainer {
     width: 100%;
+  }
+  .home .homeContainer .homeContent {
+    width: 80%;
   }
   .home .homeContainer .homeContent .mainHeader {
     font-size: 38px;
@@ -309,6 +309,424 @@
   }
   .home .homeContainer .homeContent .homeButtons .btn a {
     padding: 12px 24px;
+  }
+  .intoCountry {
+    padding-top: 56px;
+  }
+  .intoCountry .container .intoCountryContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+  }
+  .intoCountry .container .intoCountryContent .intoText {
+    color: #1e1e1e;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .intoCountry .container .intoCountryContent .intoText .special {
+    color: #1e1e1e;
+    font-family: "Playfair Display";
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .intoCountry .container .intoCountryContent .companyText {
+    color: #1e1e1e;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .numbers {
+    padding: 56px 0 96px 0;
+    width: 100%;
+    background-color: #fff;
+  }
+  .numbers .container .numAnimation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .numbers .container .numAnimation .circle {
+    display: flex;
+    flex-direction: column;
+  }
+  .numbers .container .numAnimation .circle .num {
+    color: #1e1e1e;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  .numbers .container .numAnimation .circle .plus {
+    color: #1e1e1e;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  .numbers .container .numAnimation .circle .numInfo {
+    color: #2a2a2a;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+  }
+  .numbers .container .partnersCover {
+    width: 100%;
+    margin-top: 96px;
+  }
+  .numbers .container .partnersCover img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+  }
+  .products {
+    width: 100%;
+    padding: 96px 0;
+    background-color: #fdfaf6;
+  }
+  .products .container .productsContent .produtcsTitle {
+    color: #1e1e1e;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 40px;
+  }
+  .products .container .prodCardBox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .products .container .prodCardBox .productCard {
+    width: 45%;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 5px;
+  }
+  .products .container .prodCardBox .productCard .prodCardItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .products .container .prodCardBox .productCard .productImage {
+    width: 100%;
+  }
+  .products .container .prodCardBox .productCard .productImage img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .products .container .prodCardBox .productCard .productDisc {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    gap: 16px;
+    background-color: #fff;
+  }
+  .products .container .prodCardBox .productCard .productDisc .productTitle {
+    width: 100%;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-align: left;
+  }
+  .products .container .prodCardBox .productCard .productDisc .productInfo {
+    color: #000;
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.14px;
+  }
+}
+@media (max-width: 480px) {
+  .home .homeContainer {
+    width: 100%;
+  }
+  .home .homeContainer .videoContent {
+    width: 100%;
+    height: 80vh;
+  }
+  .home .homeContainer .videoContent video {
+    width: 100%;
+    height: 80vh;
+  }
+  .home .homeContainer .homeContent {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 56px 20px;
+  }
+  .home .homeContainer .homeContent .mainHeader {
+    color: #fff;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 587;
+    line-height: 100%;
+  }
+  .home .homeContainer .homeContent .homeInfo {
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 493;
+    line-height: 150%;
+  }
+  .home .homeContainer .homeContent .homeButtons {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+  }
+  .home .homeContainer .homeContent .homeButtons .btn {
+    width: 50%;
+  }
+  .home .homeContainer .homeContent .homeButtons .btn a {
+    padding: 16px 44px;
+  }
+  .intoCountry {
+    padding-top: 56px;
+  }
+  .intoCountry .container .intoCountryContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+  }
+  .intoCountry .container .intoCountryContent .intoText {
+    color: #1e1e1e;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .intoCountry .container .intoCountryContent .intoText .special {
+    color: #1e1e1e;
+    font-family: "Playfair Display";
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .intoCountry .container .intoCountryContent .companyText {
+    color: #1e1e1e;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .partners {
+    width: 100%;
+  }
+  .partners .container .partnersContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .partners .container .partnersContent .partnersInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .partners .container .partnersContent .partnersInfo .partnersTitle {
+    color: #1e1e1e;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+  }
+  .partners .container .partnersContent .partnersInfo .partnersText {
+    color: #2a2a2a;
+    width: 100%;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.2px;
+  }
+  .ourPartners {
+    width: 100%;
+  }
+  .ourPartners .ourPartnersGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ourPartners .ourPartnersGrid .partnersInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    background-color: #fc3d40;
+    padding: 56px 20px;
+  }
+  .ourPartners .ourPartnersGrid .partnersInfo .partnersHeader {
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+  }
+  .ourPartners .ourPartnersGrid .partnersInfo .partnersText {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  .ourPartners .ourPartnersGrid .partnersInfo .partnersBtn {
+    display: flex;
+    padding: 20px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+  }
+  .ourPartners .ourPartnersGrid .partnersInfo .partnersBtn a {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .ourPartners .ourPartnersGrid .partnerWallpaper {
+    width: 100%;
+    height: 50vh;
+  }
+  .ourPartners .ourPartnersGrid .partnerWallpaper img {
+    width: 100%;
+    height: 50vh;
+  }
+  .numbers {
+    padding: 56px 0;
+    width: 100%;
+    background-color: #fff;
+  }
+  .numbers .container .numAnimation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .numbers .container .numAnimation .circle {
+    display: flex;
+    flex-direction: column;
+  }
+  .numbers .container .numAnimation .circle .num {
+    color: #1e1e1e;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  .numbers .container .numAnimation .circle .plus {
+    color: #1e1e1e;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  .numbers .container .numAnimation .circle .numInfo {
+    color: #2a2a2a;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+  }
+  .numbers .container .partnersCover {
+    width: 100%;
+    height: 50vh;
+    margin-top: 56px;
+  }
+  .numbers .container .partnersCover img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+  }
+  .products {
+    width: 100%;
+    padding: 96px 0;
+    background-color: #fdfaf6;
+  }
+  .products .container .productsContent .produtcsTitle {
+    color: #1e1e1e;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 40px;
+  }
+  .products .container .prodCardBox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .products .container .prodCardBox .productCard {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 5px;
+  }
+  .products .container .prodCardBox .productCard .prodCardItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .products .container .prodCardBox .productCard .productImage {
+    width: 100%;
+  }
+  .products .container .prodCardBox .productCard .productImage img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .products .container .prodCardBox .productCard .productDisc {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    gap: 16px;
+    background-color: #fff;
+  }
+  .products .container .prodCardBox .productCard .productDisc .productTitle {
+    width: 100%;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-align: left;
+  }
+  .products .container .prodCardBox .productCard .productDisc .productInfo {
+    color: #000;
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.14px;
   }
 }
 @media (max-width: 890px) {
@@ -336,6 +754,11 @@
   margin: 0 56px;
 }
 
+@media (max-width: 480px) {
+  .container {
+    margin: 0 20px;
+  }
+}
 .swiper {
   width: 100%;
 }
@@ -506,6 +929,7 @@
   width: 50%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer .container .footerTop .footerRight .footerItem a i {
   color: #fff;
@@ -531,4 +955,46 @@
   font-weight: 400;
   line-height: 150%;
   letter-spacing: -0.2px;
+}
+
+@media (max-width: 882px) {
+  .header {
+    width: 100%;
+  }
+  .header .container .headerContent .logo .rightside {
+    display: none;
+  }
+  .header .container .headerContent .navBar .navList .navItem:nth-child(1) {
+    display: none;
+  }
+  .header .container .headerContent .navBar .navList .navItem:nth-child(2) {
+    display: none;
+  }
+  .header .container .headerContent .navBar .navList .navItem:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .footer {
+    width: 100%;
+  }
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer .container .footerTop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer .container .footerTop .footerRight {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .container .footerTop .footerRight .footerItem:nth-child(3) {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
