@@ -12,3 +12,9 @@
   .container{
     margin: 0 56px;
   }
+
+  @media(max-width:480px){
+    .container{
+      margin: 0 20px;
+    }
+  }
