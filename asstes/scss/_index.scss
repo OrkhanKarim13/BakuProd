@@ -1,61 +1,4 @@
-// start header
-.header {
-  width: 100%;
-  position: fixed;
-  background-color: transparent;
-  padding: 32px 0;
-  z-index: 1100;
-  .container {
-    .headerContent {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        .rightside {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          .lang {
-            color: #fff;
-          }
-        }
-      }
-    }
-    .navBar {
-      .navList {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        .navItem {
-          a {
-            color: #fff;
-          }
-        }
-        .navItem:nth-child(2) {
-          background-color: #fc3d40;
-          padding: 6px 24px;
-          border-radius: 24px;
-        }
-        .navItem:nth-child(3) {
-          background-color: rgba(255, 255, 255, 0.06);
-          padding: 6px 24px;
-          border-radius: 20px;
-        }
-        .navItem:nth-child(4) {
-          background-color: rgba(255, 255, 255, 0.06);
-          padding: 6px 24px;
-          border-radius: 20px;
-        }
-      }
-    }
-  }
-}
 
-// End header
 
 // Start home section
 
@@ -337,6 +280,8 @@
       gap: 16px;
       .productCard {
         background-color: #fff;
+        border-radius: 16px;
+        padding: 5px;
         .prodCardItem {
           width: 100%;
           display: flex;

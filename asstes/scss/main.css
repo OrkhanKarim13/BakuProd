@@ -1,53 +1,4 @@
-.header {
-  width: 100%;
-  position: fixed;
-  background-color: transparent;
-  padding: 32px 0;
-  z-index: 1100;
-}
-.header .container .headerContent {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header .container .headerContent .logo {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.header .container .headerContent .logo .rightside {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.header .container .headerContent .logo .rightside .lang {
-  color: #fff;
-}
-.header .container .navBar .navList {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.header .container .navBar .navList .navItem a {
-  color: #fff;
-}
-.header .container .navBar .navList .navItem:nth-child(2) {
-  background-color: #fc3d40;
-  padding: 6px 24px;
-  border-radius: 24px;
-}
-.header .container .navBar .navList .navItem:nth-child(3) {
-  background-color: rgba(255, 255, 255, 0.06);
-  padding: 6px 24px;
-  border-radius: 20px;
-}
-.header .container .navBar .navList .navItem:nth-child(4) {
-  background-color: rgba(255, 255, 255, 0.06);
-  padding: 6px 24px;
-  border-radius: 20px;
-}
-
+@charset "UTF-8";
 .home {
   width: 100%;
   height: 100%;
@@ -301,6 +252,8 @@
 }
 .products .container .prodCardBox .productCard {
   background-color: #fff;
+  border-radius: 16px;
+  padding: 5px;
 }
 .products .container .prodCardBox .productCard .prodCardItem {
   width: 100%;
@@ -399,4 +352,183 @@
 }
 .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  padding: 32px 0;
+  z-index: 1100;
+}
+.header .container .headerContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .headerContent .logo {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.header .container .headerContent .logo .rightside {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header .container .headerContent .logo .rightside .lang {
+  color: #fff;
+}
+.header .container .navBar .navList {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header .container .navBar .navList .navItem a {
+  color: #fff;
+  font-size: 16px;
+}
+.header .container .navBar .navList .navItem:nth-child(2) {
+  background-color: #fc3d40;
+  padding: 6px 24px;
+  border-radius: 24px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.header .container .navBar .navList .navItem:nth-child(2) a {
+  display: block;
+  border-radius: 24px;
+  background-color: #fc3d40;
+  color: #fff;
+  transition: transform 0.5s ease;
+}
+.header .container .navBar .navList .navItem:nth-child(2) a:before {
+  content: "Partnyor ol";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background-color: transparent;
+  color: #fff;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 0.5s ease;
+}
+.header .container .navBar .navList .navItem:nth-child(2) a:hover::before {
+  top: 0;
+}
+.header .container .navBar .navList .navItem:nth-child(3) {
+  width: 160px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
+}
+.header .container .navBar .navList .navItem:nth-child(3) a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 6px 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+.header .container .navBar .navList .navItem:nth-child(3) a img {
+  margin-left: 10px;
+  transition: 0.5s ease;
+}
+.header .container .navBar .navList .navItem:nth-child(3) a:before {
+  content: "←";
+  position: absolute;
+  left: 10px;
+  opacity: 0;
+  font-size: 18px;
+  transition: opacity 0.5s ease;
+}
+.header .container .navBar .navList .navItem:nth-child(3) a:hover {
+  padding-left: 45px;
+}
+.header .container .navBar .navList .navItem:nth-child(3) a:hover img {
+  opacity: 0;
+  margin: 0;
+  transition: opacity 0.5s ease;
+}
+.header .container .navBar .navList .navItem:nth-child(3) a:hover:before {
+  opacity: 1;
+}
+.header .container .navBar .navList .navItem:nth-child(4) {
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 6px 24px;
+  border-radius: 20px;
+}
+
+.footer {
+  width: 100%;
+  padding: 96px 0 64px 0;
+  background-color: #222;
+}
+.footer .container .footerTop {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .container .footerTop .footerLeft {
+  width: 50%;
+  display: flex;
+}
+.footer .container .footerTop .footerLeft .footerItem .footerList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 28px;
+}
+.footer .container .footerTop .footerLeft .footerItem .footerList .footerListItem {
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .footerTop .footerLeft .footerItem .footerList .footerListItem a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+}
+.footer .container .footerTop .footerRight {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .container .footerTop .footerRight .footerItem a i {
+  color: #fff;
+  border-radius: 36px;
+  border: 1px solid #fff;
+  padding: 24px 12px;
+}
+.footer .container .footerTop .footerRight .footerItem .footerList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+}
+.footer .container .footerTop .footerRight .footerItem .footerList .footerListItem {
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .footerTop .footerRight .footerItem .footerList .footerListItem a {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.2px;
 }/*# sourceMappingURL=main.css.map */

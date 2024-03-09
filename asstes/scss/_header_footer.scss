@@ -1,0 +1,200 @@
+// start header
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  padding: 32px 0;
+  z-index: 1100;
+  .container {
+    .headerContent {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        .rightside {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          .lang {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .navBar {
+      .navList {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .navItem {
+          a {
+            color: #fff;
+            font-size: 16px;
+          }
+        }
+        .navItem:nth-child(2) {
+          background-color: #fc3d40;
+          padding: 6px 24px;
+          border-radius: 24px;
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          a {
+            display: block;
+            border-radius: 24px;
+            background-color: #fc3d40;
+            color: #fff;
+            transition: transform 0.5s ease;
+            &:before {
+              content: "Partnyor ol";
+              position: absolute;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 24px;
+              background-color: transparent;
+              color: #fff;
+              top: 100%;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              transition: top 0.5s ease; // Transition efekti.
+            }
+            &:hover::before {
+              top: 0; // İçeriği aşağıya kaydırmak için.
+            }
+          }
+        }
+        .navItem:nth-child(3) {
+          width: 160px;
+          background-color: rgba(255, 255, 255, 0.06);
+          border-radius: 20px;
+          display: inline-block;
+          position: relative;
+          a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 6px 24px;
+            color: #fff;
+            text-decoration: none;
+            transition: 0.5s ease; // Sol boşluk (margin-left) transition efekti.
+            img {
+              margin-left: 10px;
+              transition: 0.5s ease;
+            }
+            &:before {
+              content: "\2190"; // Sol ok simgesi (Unicode).
+              position: absolute;
+              left: 10px; // Sol okun içeriye doğru kayması.
+              opacity: 0;
+              font-size: 18px;
+              transition: opacity 0.5s ease; // Opacity transition efekti.
+            }
+
+            &:hover {
+              padding-left: 45px;
+
+              img {
+                opacity: 0;
+                margin: 0;
+                transition: opacity 0.5s ease;
+              } // Hover durumunda içeriği sağa kaydırma.
+            }
+
+            &:hover:before {
+              opacity: 1; // Hover durumunda sol okun görünmesi.
+            }
+          }
+        }
+        .navItem:nth-child(4) {
+          background-color: rgba(255, 255, 255, 0.06);
+          padding: 6px 24px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+
+// End header
+
+//   Start footer
+
+.footer {
+  width: 100%;
+  padding: 96px 0 64px 0;
+  background-color: #222;
+  .container {
+    .footerTop {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .footerLeft {
+        width: 50%;
+        display: flex;
+        .footerItem {
+          .footerList {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 28px;
+            .footerListItem {
+              display: flex;
+              flex-direction: column;
+              a {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                letter-spacing: -0.2px;
+              }
+            }
+          }
+        }
+      }
+      .footerRight {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        .footerItem {
+          a {
+            i {
+              color: #fff;
+              border-radius: 36px;
+              border: 1px solid #fff;
+              padding: 24px 12px;
+            }
+          }
+          .footerList {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 4px;
+            .footerListItem {
+              display: flex;
+              flex-direction: column;
+              a {
+                color: #fff;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                letter-spacing: -0.2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
