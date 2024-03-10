@@ -31,23 +31,26 @@ window.addEventListener("scroll", () => {
 //  slider
 
 var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: false,
-    centeredSlides: true,
-    slidesPerView: "drag",
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: true,
-      pauseOnMouseEnter: true,
-    },
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 0,
-      modifier: 0,
-      slideShadows: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
+  effect: "slide",
+  grabCursor: false,
+  centeredSlides: false,
+  slidesPerView: "auto",
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: true,
+    pauseOnMouseEnter: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+  // home video
+
+  document.addEventListener("DOMContentLoaded", function() {
+ 
+    var video = document.getElementById("video-bg");
+    
+
+    video.play();
   });
