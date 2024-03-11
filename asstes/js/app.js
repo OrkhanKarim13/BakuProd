@@ -31,15 +31,10 @@ window.addEventListener("scroll", () => {
 //  slider
 
 var swiper = new Swiper(".mySwiper", {
-  effect: "slide",
+  effect: "drag",
   grabCursor: false,
   centeredSlides: false,
   slidesPerView: "auto",
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: true,
-    pauseOnMouseEnter: true,
-  },
   pagination: {
     el: ".swiper-pagination",
   },
@@ -54,3 +49,50 @@ var swiper = new Swiper(".mySwiper", {
 
     video.play();
   });
+
+
+
+
+
+
+  // categories
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var toggleButton = document.querySelector(".menu-toggle");
+    var menuContent = document.querySelector(".menu-content");
+  
+    toggleButton.addEventListener("click", function() {
+      menuContent.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function(event) {
+      if (!menuContent.contains(event.target) && event.target !== toggleButton) {
+        menuContent.classList.remove("active");
+      }
+    });
+    document.addEventListener("click", function(event) {
+      var closeButton = document.querySelector(".closeButton");
+
+      if (   event.target === closeButton ) {
+        menuContent.classList.remove("active");
+      }
+    });
+
+
+    document.addEventListener("click", function(event) {
+      var closeSpan = document.querySelector(".closespan");
+      if (   event.target === closeSpan ) {
+        menuContent.classList.remove("active");
+      }
+    });
+  });
+  
+
+  // document.addEventListener("click", function(event) {
+  //   var closeButton = document.querySelector(".closeButton");
+  
+  //   if (event.target === closeButton ) {
+  //     menuContent.classList.remove("active");
+  //   }
+  // });
