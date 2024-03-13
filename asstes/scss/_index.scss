@@ -93,11 +93,22 @@
           font-family: "Playfair Display";
         }
       }
-      .companyText {
-        color: #1e1e1e;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 150%;
+      .companyInfo {
+        display: flex;
+        gap: 3px;
+        .companyIcon {
+          img {
+            margin-top: 10px;
+          }
+        }
+        .companyText {
+          color: #2a2a2a;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 30px */
+          letter-spacing: -0.2px;
+        }
       }
     }
   }
@@ -112,13 +123,13 @@
   width: 100%;
   background-color: #fff;
   .container {
-    
     .numAnimation {
       width: 60%;
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
       justify-content: space-between;
+      margin-bottom: 56px;
       .circle {
         display: flex;
         flex-direction: column;
@@ -143,17 +154,13 @@
     }
     .slider {
       width: 100%;
-      .swiper{
-        
-        .swiper-wrapper{
-          
-          margin-top: 56px;
-          .partnersSlide  {
-            img{
-              width: 100% ;
+      .swiper {
+        .swiper-wrapper {
+          .partnersSlide {
+            img {
+              width: 100%;
               height: 100%;
-             object-fit: cover;
-  
+              object-fit: cover;
             }
           }
         }
@@ -262,7 +269,6 @@
   }
 }
 
-
 // End ourPartners section
 
 @media (max-width: 937px) {
@@ -300,6 +306,7 @@
         gap: 24px;
         .intoText {
           color: #1e1e1e;
+          font-family: "DM Sans", sans-serif;
           font-size: 24px;
           font-style: normal;
           font-weight: 700;
@@ -313,11 +320,15 @@
             line-height: 150%;
           }
         }
-        .companyText {
-          color: #1e1e1e;
-          font-size: 20px;
-          font-weight: 500;
-          line-height: 150%;
+        .companyInfo {
+          .companyText {
+            color: #1e1e1e;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+            font-family: "DM Sans", sans-serif;
+            letter-spacing: normal;
+          }
         }
       }
     }
@@ -331,16 +342,19 @@
       .numAnimation {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+
         .circle {
+          width: 40%;
           display: flex;
           flex-direction: column;
           .num {
             color: #1e1e1e;
+            font-family: "DM Sans", sans-serif;
             font-size: 48px;
             font-style: normal;
             font-weight: 700;
-            line-height: 100%;
+            line-height: 100%; /* 48px */
           }
           .plus {
             color: #1e1e1e;
@@ -369,8 +383,64 @@
       }
     }
   }
+  .ourPartners {
+    width: 100%;
+    .ourPartnersGrid {
+display: flex;
+flex-direction: column;
+      .partnersInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 16px;
+        background-color: #fc3d40;
+        padding: 56px 20px;
+        .partnersHeader {
+          width: 90%;
+          color: #fff;
+          font-family: "DM Sans", sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 125%;
+        }
+        .partnersText {
+          width: 100%;
+          color: rgba(255, 255, 255, 0.95);
+          font-family: "DM Sans", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+        .partnersBtn {
+          width: 100%;
+          display: flex;
+          padding: 20px 48px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin-top: 0;
 
-  
+          a {
+            color: #000;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+          }
+        }
+      }
+      .partnerWallpaper {
+        width: 100%;
+        img {
+          width: 100%;
+          
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -379,10 +449,9 @@
       width: 100%;
       .videoContent {
         width: 100%;
-        height: 80vh;
+
         video {
           width: 100%;
-          height: 80vh;
         }
       }
       .homeContent {
@@ -450,6 +519,7 @@
           font-size: 20px;
           font-weight: 500;
           line-height: 150%;
+          font-family: "DM Sans", sans-serif;
         }
       }
     }
@@ -470,17 +540,20 @@
           flex-direction: column;
           gap: 24px;
           .partnersTitle {
+            width: 100%;
             color: #1e1e1e;
+            font-family: "DM Sans", sans-serif;
             font-size: 32px;
             font-style: normal;
             font-weight: 700;
             line-height: 125%;
+            text-align: center;
           }
           .partnersText {
             color: #2a2a2a;
             width: 100%;
-            font-family: "Work Sans";
-            font-size: 20px;
+            font-family: "DM Sans", sans-serif;
+            font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: 150%;
@@ -494,8 +567,8 @@
   .ourPartners {
     width: 100%;
     .ourPartnersGrid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+display: flex;
+flex-direction: column;
       .partnersInfo {
         display: flex;
         flex-direction: column;
@@ -505,20 +578,25 @@
         background-color: #fc3d40;
         padding: 56px 20px;
         .partnersHeader {
+          width: 90%;
           color: #fff;
+          font-family: "DM Sans", sans-serif;
           font-size: 24px;
           font-style: normal;
           font-weight: 700;
           line-height: 125%;
         }
         .partnersText {
+          width: 100%;
           color: rgba(255, 255, 255, 0.95);
+          font-family: "DM Sans", sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: 150%; /* 24px */
+          line-height: 150%;
         }
         .partnersBtn {
+          width: 100%;
           display: flex;
           padding: 20px 48px;
           justify-content: center;
@@ -537,9 +615,10 @@
       }
       .partnerWallpaper {
         width: 100%;
+        height: 85vh;
         img {
           width: 100%;
-          height: 50vh;
+          
         }
       }
     }
@@ -554,6 +633,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+
         .circle {
           display: flex;
           flex-direction: column;
@@ -593,20 +673,32 @@
       }
     }
   }
-  
-}
-
-@media (max-width: 890px) {
-  .ourPartners {
-    .ourPartnersGrid {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .ourPartnersGrid .partnersInfo,
-    .ourPartnersGrid .partnerWallpaper {
-      width: 100%;
+  .slider {
+    width: 100%;
+    .container {
+      margin: 0;
+      .swiper {
+        .swiper-wrapper {
+          .productSlider {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
+
+// @media (max-width: 890px) {
+//   .ourPartners {
+//     .ourPartnersGrid {
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//     }
+//     .ourPartnersGrid .partnersInfo,
+//     .ourPartnersGrid .partnerWallpaper {
+//       width: 100%;
+//     }
+//   }
+// }

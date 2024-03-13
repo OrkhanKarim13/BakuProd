@@ -41,7 +41,7 @@
             position: absolute;
             top: 20px;
             background-color: #e62b2e;
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -170,19 +170,19 @@
         }
         .navItem:nth-child(4) {
           background-color: rgba(255, 255, 255, 0.06);
-          padding: 6px 24px;
-          border-radius: 20px;
+          padding: 8px 24px;
+          border-radius: 24px;
         }
       }
     }
   }
   .mobileMenu {
-    display: none;
+    display: none ;
     width: 100%;
     background-color: #fc3d40;
     .mobileList {
       width: 100%;
-      .mobileİtem {
+      .mobileItem {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -194,12 +194,13 @@
         padding: 16px 24px;
       }
       .categoriesMobileList {
+        display: none;
         width: 100%;
         background-color: #fff;
         overflow-y: auto;
         max-height: 100vh;
         transition: max-height 0.3s ease;
-        .categoriesMobileİtem {
+        .categoriesMobileItem {
           width: 100%;
           .categorieCard {
             display: flex;
@@ -333,10 +334,10 @@
 @media (max-width: 882px) {
   .header {
     width: 100%;
-    background-color: #fc3d40;
+    border: none;
     margin: 0;
     padding: 16px 20px;
-    position: relative;
+
     .container {
       margin: 0;
       .headerContent {
@@ -346,6 +347,7 @@
           }
         }
         .navBar {
+          border: none;
           .navList {
             .navItem {
               border-radius: 24px;
@@ -361,16 +363,75 @@
             .navItem:nth-child(3) {
               display: none;
             }
+            .navItem:nth-child(4) {
+              padding: 8px 16px;
+            }
           }
         }
       }
     }
     .mobileMenu {
-      display: flex;
+      display: none;
       position: absolute;
       top: 120px;
       left: 0;
+      .mobileMenu{
+        .mobileList{
+          .mobileMenu {
+            display: none ;
+            width: 100%;
+            background-color: #fc3d40;
+            .mobileList {
+              width: 100%;
+              .mobileItem {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: #fff;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+                padding: 16px 24px;
+              }
+              .categoriesMobileList {
+                
+                .categoriesMobileItem {
+                  width: 100%;
+                  .categorieCard {
+                    display: flex;
+                    gap: 10%;
+                    .categorieImage {
+                      width: 40%;
+                      padding: 10px;
+                      img {
+                        width: 100%;
+                        object-fit: contain;
+                      }
+                    }
+                    .categorieInfo {
+                      width: 50%;
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+        
+                      a {
+                        color: #1e1e1e;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 150%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
+    
   }
 }
 

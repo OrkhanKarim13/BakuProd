@@ -80,25 +80,20 @@ document.addEventListener("click", function (event) {
 
 // language
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   const langBtn = document.querySelector(".langBtn");
   const langList = document.querySelector(".langList");
 
-  langBtn.addEventListener("click", function () {
-    const isVisible = window.getComputedStyle(langList).display !== "none";
+  // Lang listeyi sayfa yüklendiğinde kapalı yap
+  langList.style.display = "none";
 
-    if (isVisible) {
-      langList.style.display = "none";
-    } else {
+  langBtn.addEventListener("click", function() {
+    if (langList.style.display === "none" || langList.style.display === "") {
       langList.style.display = "flex";
+    } else {
+      langList.style.display = "none";
     }
   });
-  const langListVisible = localStorage.getItem("langListVisible");
-  if (langListVisible === "true") {
-    langList.style.display = "flex";
-  } else {
-    langList.style.display = "none";
-  }
 });
 
 // mobile menu
@@ -108,11 +103,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const mobileMenu = document.querySelector(".mobileMenu");
 
   burgerMenu.addEventListener("click", function() {
-   
-    if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
-      mobileMenu.style.display = "flex";
-    } else {
-      mobileMenu.style.display = "none";
+    if (window.innerWidth < 822) { 
+      if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
+        mobileMenu.style.display = "flex";
+      } else {
+        mobileMenu.style.display = "none";
+      }
     }
   });
 });
@@ -121,21 +117,18 @@ document.addEventListener("DOMContentLoaded", function() {
 //  mobile menu list
 
 document.addEventListener("DOMContentLoaded", function() {
-  const mobileItem = document.querySelector(".mobileİtem");
-  const arrowImg = mobileItem.querySelector(".arrowImg");
+  const mobileItem = document.querySelector(".mobileItem");
+  const arrowImg = document.querySelector(".arrowImg");
   const categoriesMobileList = document.querySelector(".categoriesMobileList");
 
   mobileItem.addEventListener("click", function() {
-    // arrowImg'in dönme durumunu kontrol et
-    const isRotated = arrowImg.style.transform === "rotate(180deg)";
-
-    // Dönme durumuna göre img'in rotasyonunu değiştir
-    if (isRotated) {
-      arrowImg.style.transform = "rotate(0deg)";
-      categoriesMobileList.style.display = "none";
+    // ArrowImg'in dönüş açısını kontrol et
+    if (arrowImg.style.transform === "" || arrowImg.style.transform === "rotate(0deg)") {
+      arrowImg.style.transform = "rotate(180deg)"; // Yukarı kaldır
+      categoriesMobileList.style.display = "block"; // Listeyi aç
     } else {
-      arrowImg.style.transform = "rotate(180deg)";
-      categoriesMobileList.style.display = "";
+      arrowImg.style.transform = "rotate(0deg)"; // Aşağı indir
+      categoriesMobileList.style.display = "none"; // Listeyi kapat
     }
   });
 });
